@@ -27,3 +27,4 @@ public class MathCalculator {
         System.out.println("Результат расчета равен: " + sumFourCalkulat(10, 20));
     }
 }
+
