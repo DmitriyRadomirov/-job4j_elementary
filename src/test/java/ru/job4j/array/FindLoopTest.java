@@ -14,6 +14,15 @@ public class FindLoopTest {
     }
 
     @Test
+    public void whenArrayHas9Then0() {
+        int[] data = {4, 3, 2, 9};
+        int el = 9;
+        int result = FindLoop.indexOf(data, el);
+        int expected = 3;
+        Assert.assertEquals(expected, result);
+    }
+
+    @Test
     public void whenArrayHasNot12ThenMinus1() {
         int[] data =  {8, 6, 7, 4, 8};
         int el = 12;
