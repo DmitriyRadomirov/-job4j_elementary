@@ -25,3 +25,4 @@ public class CheckTest {
         Assert.assertTrue(result);
     }
 }
+
