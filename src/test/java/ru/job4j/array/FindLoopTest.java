@@ -14,7 +14,7 @@ public class FindLoopTest {
     }
 
     @Test
-    public void whenArrayHas9Then0() {
+    public void whenArrayHas9Then3() {
         int[] data = {4, 3, 2, 9};
         int el = 9;
         int result = FindLoop.indexOf(data, el);
