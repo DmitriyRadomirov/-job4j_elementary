@@ -19,7 +19,7 @@ public class SortSelectedTest {
         int[] expected = new int[] {6, 7, 8};
         Assert.assertArrayEquals(expected, result);
     }
-    
+
     @Test
     public void whenSortArrayOf6elements() {
         int[] data = new int[] {5, 4, 3, 7, 6, 8};
