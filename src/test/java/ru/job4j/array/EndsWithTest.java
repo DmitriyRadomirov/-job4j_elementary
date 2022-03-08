@@ -20,6 +20,3 @@ public class EndsWithTest {
         Assert.assertFalse(result);
     }
 }
-
-
-
