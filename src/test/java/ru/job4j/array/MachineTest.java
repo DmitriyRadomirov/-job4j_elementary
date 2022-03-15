@@ -40,3 +40,4 @@ public class MachineTest {
         Assert.assertArrayEquals(expected, result);
     }
 }
+
