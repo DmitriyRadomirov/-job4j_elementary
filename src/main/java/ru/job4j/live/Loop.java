@@ -2,8 +2,8 @@ package ru.job4j.live;
 
 public class Loop {
     public static void main(String[] args) {
-        for (int i = 0; i <= 10; i++) {
-            System.out.println(i);
+        int[] array = {1, 2, 3};
+                    System.out.println(array[-1]);
         }
     }
-}
+
