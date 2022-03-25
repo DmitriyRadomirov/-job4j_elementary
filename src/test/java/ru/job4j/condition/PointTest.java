@@ -1,51 +1,45 @@
 package ru.job4j.condition;
 
 import org.junit.Test;
-import org.junit.Assert;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
 public class PointTest {
 
     @Test
-    public void when00to20then2() {
+    public void whenX0Y0toX0Y2then2() {
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2);
+        double dist = a.distance(b);
         double expected = 2;
-        int x1 = 0;
-        int y1 = 0;
-        int x2 = 2;
-        int y2 = 0;
-        double out = Point.distance(x1, y1, x2, y2);
-        Assert.assertEquals(expected, out, 0.01);
+        assertThat(expected, is(a.distance(b)));
     }
 
     @Test
-    public void when11to11then0() {
+   public void whenX1Y1toX1Y1then0() {
+        Point a = new Point(1, 1);
+        Point b = new Point(1, 1);
+        double dist = a.distance(b);
         double expected = 0;
-        int x1 = 1;
-        int y1 = 1;
-        int x2 = 1;
-        int y2 = 1;
-        double out = Point.distance(x1, y1, x2, y2);
-        Assert.assertEquals(expected, out, 0.01);
+        assertThat(expected, is(a.distance(b)));
     }
 
     @Test
-    public void when22to12then1() {
+    public void whenX2Y2toX1Y2then1() {
+        Point a = new Point(2, 2);
+        Point b = new Point(1, 2);
+        double dist = a.distance(b);
         double expected = 1;
-        int x1 = 2;
-        int y1 = 2;
-        int x2 = 1;
-        int y2 = 2;
-        double out = Point.distance(x1, y1, x2, y2);
-        Assert.assertEquals(expected, out, 0.01);
+        assertThat(expected, is(a.distance(b)));
     }
 
     @Test
-    public void whenx10y1tox15y2then5dot09() {
-        double expected = 5.09;
-        int x1 = 10;
-        int y1 = 1;
-        int x2 = 15;
-        int y2 = 2;
-        double out = Point.distance(x1, y1, x2, y2);
-        Assert.assertEquals(expected, out, 0.01);
+    public void whenX2Y2toX0Y2then2() {
+        Point a = new Point(2, 2);
+        Point b = new Point(0, 2);
+        double dist = a.distance(b);
+        double expected = 2;
+        assertThat(expected, is(a.distance(b)));
     }
 }
